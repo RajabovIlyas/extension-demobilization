@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    label {
+        @apply dark:text-zinc-300 block text-sm font-medium text-gray-900
+    }
+
+    label::first-letter {
+        text-transform: uppercase;
+    }
+
+    input {
+        @apply focus:border-emerald-500 focus-visible:outline-0 mt-2 bg-gray-50
+        border border-gray-300 text-gray-900 text-sm rounded-lg
+        focus:ring-emerald-500 block w-full p-2.5
+    }
+}
+
+@layer components {
+ .content {
+     @apply relative w-80 border-4 border-lime-950 bg-lime-50 flex flex-col justify-center items-center p-2 gap-2
+ }
+    .input-wrong {
+        @apply dark:text-red-700 mt-1 text-sm text-red-600 h-5
+    }
+}
