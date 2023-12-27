@@ -12,7 +12,7 @@ const getPath = (setPath: (data: PathEnum) => void) => ({
 const Router: FC = () => {
     const [path, setPath] = useState<PathEnum>(PathEnum.MAIN);
     return (
-        <div className="content">
+        <div className="content gradient-border">
             {getPath(setPath)[path]}
         </div>
     )
