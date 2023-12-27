@@ -33,5 +33,5 @@ export const useFormSetting = ({setPath}: FormSettingProps) => {
         setPath(PathEnum.MAIN)
     });
 
-    return {control, register, handleSubmit, errors, onSubmit};
+    return {control, register, handleSubmit, errors, onSubmit, defaultValue: {expirationDate}};
 };
