@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    form {
+        @apply w-full
+    }
+
+    h1 {
+        @apply text-zinc-200 text-8xl
+    }
+
+    h4 {
+        @apply text-zinc-200
+    }
+
+    label {
+        @apply text-zinc-200 block text-sm font-medium
+    }
+
+    label::first-letter {
+        text-transform: uppercase;
+    }
+
+    input {
+        @apply focus:border-gray-800 focus-visible:outline-0 mt-2 bg-gray-50
+        border-2 text-gray-900 text-sm rounded-lg
+        focus:ring-emerald-500 block w-full p-2.5 border-gray-700
+    }
+}
+
+@layer components {
+    .content {
+        @apply relative w-80 bg-gray-800 flex flex-col justify-center items-center p-2 gap-2
+    }
+
+    .input-wrong {
+        @apply mt-1 text-sm text-red-600 h-5 decoration-solid
+    }
+
+    .button-img {
+        @apply dark:fill-zinc-300 hover:scale-110 w-6 h-6  transition duration-200 rounded-full
+    }
+
+    .btn {
+        @apply text-white focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2
+        bg-green-800 hover:bg-green-700 focus:ring-green-700 border-green-700 w-full
+    }
+}
